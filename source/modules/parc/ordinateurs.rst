@@ -1,47 +1,95 @@
 Ordinateurs
 ===========
 
+Le terme **Ordinateur** dans GLPI est générique. Pour intégrer cette catégorie d'objet, un équipement doit posséder au minimum un processeur, un système d'exploitation et des logiciels installés.
+
+Plusieurs équipements rentrent donc dans cette catégorie:
+
+* Ordinateur avec unité centrale
+* Ordinateur portable
+* Serveur
+* Smartphone
+* Tablette
+
 Dans la fiche d'un ordinateur, on trouve un certain nombre d'informations concernant le système d'exploitation (nom, version, service pack, numéro de série, product ID), les caractéristiques générales (fabricant, modèle, type, numéro de série), les informations de gestion (responsable technique, statut, localisation) et les usagers du poste (connus ou non dans GLPI).
 
-D'autres champs sont informatifs, comme `Réseau` (type de connexion au poste), et la `source de la mise à jour` qui est un intitulé indiquant d'où proviennent les mises à jour d'un poste (oui/non, Windows update, yum, apt, etc).
 
-Il est possible d'utiliser les :doc:`gabarits avec les ordinateurs <../generalites/gabarits>`.
+
+D'autres champs sont informatifs, comme `Réseau` (type de connexion au poste), et la `source de la mise à jour` qui est un intitulé indiquant d'où proviennent les mises à jour d'un poste (oui/non, Windows update, yum, apt, etc).
 
 .. note::
 
    * Dans le cas d'une utilisation de GLPI couplé avec un outil d'inventaire, différentes informations sur l'importation sont également disponibles.
-   * Un ordinateur peut être à la fois un serveur, un ordinateur de bureau ou un portable. Pour les différencier, il est possible d'utiliser le champ type.
+   * Il est possible d'utiliser les :doc:`gabarits avec les ordinateurs <../generalites/gabarits>`.
 
 Les différents onglets
 ----------------------
 
+Ordinateur
+~~~~~~~~~~
+
+Premier onglet de l'objet, celui ci regroupe des informations généralistes comme:
+
+* Le nom de l'objet dans GLPI, son fabricant et son modèle ;
+* Son type, le lieu physique et son statut dans au sein du parc ;
+* Son affectation auprès des membres de l'organisation ainsi que des groupes/utilisateurs de la plateforme.
+
+D'autres champs viennent compléter cet onglet notamment pour l'identification technique de l'objet: 
+
+* Numéro de série
+* Numéro d'inventaire
+* UUID
+
+.. image:: images/computers-assets.png
+        :alt: Fiche Ordinateur
+        :align: center
+
+
+.. include:: onglets/impact-analysis.rst
+
+Systèmes d'exploitation
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Dans cet onglet il est possible d'affecter un système d'exploitation à l'ordinateur.
+
+.. note::
+  * Les systèmes d'exploitations sont des intitulés dans GLPI, il est donc possible de les créer au préalable. 
+  * En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour !
+
+.. image:: images/os-computers-assets.png
+        :alt: Système d'exploitation d'un ordinateur
+        :align: center
+
 .. include:: onglets/composants.rst
+
 
 Volumes
 ~~~~~~~
 
-Gestion des volumes des ordinateurs. Un volume lié à un ordinateur est caractérisé par son nom, la partition physique, son point de montage, son système de fichiers ainsi que sa taille. Il est également possible de définir la taille restant libre sur le volume.
+Dans cet onglet, sont gérés les volumes de l'ordinateur. Un volume lié à un ordinateur est caractérisé par son nom, la partition physique, son point de montage, son système de fichiers ainsi que sa taille. Il est également possible de définir la taille restant libre sur le volume.
 
 .. note::
-
    En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour.
 
+.. image:: images/volumes-computers-assets.png
+        :alt: Volumes liés à l'objet ordinateur
+        :align: center
 
-Logiciels
-~~~~~~~~~
+Logiciels (et licences)
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Gestion des logiciels installés sur les ordinateurs. Ceux-ci sont triés par catégorie et sont caractérisés par leur nom, leur version ainsi que le statut de cette dernière.
+Cet onglet permet d'associer à un ordinateur les logiciels et les licences existants déjà dans GLPI. Ceux-ci sont triés par catégorie et sont caractérisés par leur nom, leur version ainsi que le statut de cette dernière.
 
 Si une licence est associée à l'utilisation de ce logiciel sur cet ordinateur, l'information sera également présentée.
-
-Pour installer un logiciel, sélectionner son nom dans la liste déroulante, puis sa version.
 
 .. note::
 
     * La liste déroulante énumère les logiciels disponibles dans l'entité.
-    * La liste des logiciels disponibles se paramètre dans la :ref:`gestion des logiciels <gestion-logiciels>`.
+    * En cas d'utilisation d'un outil d'inventaire tiers, les logiciels peuvent être automatiquement importés dans GLPI, associés à l'ordinateur et mettre à jour la liste à chaque actualisation de l'inventaire !
 
-Pour associer une licence à cet ordinateur, sélectionner le logiciel puis la licence souhaitée dans la liste déroulante.
+.. image:: images/softwares-computers-assets.png
+        :alt: Logiciels et Licences installés sur un ordinateur
+        :align: center
 
 .. include:: onglets/connexions.rst
 

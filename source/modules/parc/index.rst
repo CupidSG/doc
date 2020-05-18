@@ -1,27 +1,30 @@
 Module Parc
 ===========
 
-Le module d'inventaire de GLPI est destiné à la gestion des éléments composant le parc informatique.
+Le module Parc de GLPI est destiné à la gestion des matériels et logiciels composants le parc informatique de l'organisation.
+
 
 La gestion de l'inventaire dans GLPI
 ------------------------------------
 
-Pour la gestion des matériels et des logiciels du parc, GLPI permet nativement de lister tous les éléments présents au sein de l'organisme que l'on souhaite administrer.
+GLPI, nativement, est un outil statique. GLPI permet de lister les équipements et logiciels mais une intervention humaine est nécessaire pour saisir les informations et les mettre à jour.
 
-Cependant, on peut automatiser la remontée d'informations depuis les équipements grâce à un outils tiers. Ainsi GLPI propose l'utilisation de 2 plugins existants :
+Cependant, automatiser la remontée d'informations est possible en couplant GLPI avec un outils tiers spécialisé. Ainsi GLPI propose l'utilisation de 2 plugins existants :
 
-* Le plugin `Fusion Inventory <https://github.com/fusioninventory/fusioninventory-for-glpi/>`_
+* Le plugin `Fusion Inventory <https://github.com/fusioninventory/fusioninventory-for-glpi/>`_ disponible sur Github.
 
    Il transforme GLPI en serveur d'inventaire (les agents discutent directement avec GLPI)
 
    Vous pouvez également consulter le `site officiel de FusionInventory <http://www.fusioninventory.org>`_.
 
-* Le plugin `ocsinventoryng <https://github.com/pluginsGLPI/ocsinventoryng>`_
+* Le plugin `ocsinventoryng <https://github.com/pluginsGLPI/ocsinventoryng>`_ disponible sur Github.
 
-   Il permet de synchroniser la base GLPI avec un l'outil d'inventaire `OCS Inventory NG <http://www.ocsinventory-ng.org>`_ (les agents des ordinateurs du parc discutent avec le serveur OCS Inventory NG).
+   Il permet de synchroniser la base GLPI avec un l'outil d'inventaire `OCS Inventory NG <http://www.ocsinventory-ng.org>`_ (les agents des équipements du parc discutent avec le serveur OCS Inventory NG).
 
-Types disponibles
+Objets disponibles
 -----------------
+
+Chaque objet implémenté dans GLPI bénéficie d'une "fiche". Cette fiche regroupe toutes les informations relatives à l'objet séparées en différents onglets (Composants, Connexions, etc.)
 
 .. toctree::
    :maxdepth: 1
