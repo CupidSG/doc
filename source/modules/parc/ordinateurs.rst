@@ -31,7 +31,7 @@ Ordinateur
 Premier onglet de l'objet, celui ci regroupe des informations généralistes comme:
 
 * Le nom de l'objet dans GLPI, son fabricant et son modèle ;
-* Son type, le lieu physique et son statut dans au sein du parc ;
+* Son type, le lieu physique et son statut au sein du parc ;
 * Son affectation auprès des membres de l'organisation ainsi que des groupes/utilisateurs de la plateforme.
 
 D'autres champs viennent compléter cet onglet notamment pour l'identification technique de l'objet: 
@@ -41,8 +41,8 @@ D'autres champs viennent compléter cet onglet notamment pour l'identification t
 * UUID
 
 .. image:: images/computers-assets.png
-        :alt: Fiche Ordinateur
-        :align: center
+  :alt: Fiche Ordinateur
+  :align: center
 
 
 .. include:: onglets/impact-analysis.rst
@@ -57,8 +57,8 @@ Dans cet onglet il est possible d'affecter un système d'exploitation à l'ordin
   * En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour !
 
 .. image:: images/os-computers-assets.png
-        :alt: Système d'exploitation d'un ordinateur
-        :align: center
+  :alt: Système d'exploitation d'un ordinateur
+  :align: center
 
 .. include:: onglets/composants.rst
 
@@ -91,13 +91,29 @@ Si une licence est associée à l'utilisation de ce logiciel sur cet ordinateur,
         :alt: Logiciels et Licences installés sur un ordinateur
         :align: center
 
-.. include:: onglets/connexions.rst
+Connexions
+~~~~~~~~~~
 
-.. include:: onglets/ports-reseaux.rst
+Dans cet onglet, il est possible d'etablir des connexions avec d'autres matériels du parc présents dans GLPI.
+Concernant les objets **Ordinateurs**, des liens peuvent être établis avec:
+
+  * Imprimante
+  * Moniteur
+  * Périphérique
+  * Téléphone
+
+.. note::
+  Le lien est établi dans les deux sens, il sera visible depuis l'ordinateur et depuis l'équipement associé.
+
+.. image:: images/connexions-computers-assets.png
+  :alt: Matériels connectés à un ordinateur
+  :align: center
+
+.. include:: onglets/ports-reseau.rst
 
 .. include:: onglets/gestion.rst
 
-.. include:: ../onglets/contrats.rst
+.. include:: onglets/contrat.rst
 
 .. include:: ../onglets/documents.rst
 
@@ -106,42 +122,93 @@ Virtualisation
 
 Dans cet onglet, on retrouve tous les systèmes de virtualisation (machines virtuelles, containers, jails, ...) associés à un hôte (host) ou l'hôte sur lequel un système de virtualisation est installé. Les informations disponibles varient d'un système à l'autre, en fonction des information qu'il est effectivement possible d'obtenir.
 
-pour une machine virtuelle par exemple, on trouvera son nom, son système de virtualisation, son modèle de virtualisation, l'état de la machine virtuelle, la mémoire allouée ainsi que le nom de la machine physique (hôte) et le nombre de processeurs logiques.
+Pour une machine virtuelle par exemple, on trouvera son nom, son système de virtualisation, son modèle de virtualisation, l'état de la machine virtuelle, la mémoire allouée ainsi que le nom de la machine physique (hôte) et le nombre de processeurs logiques.
 
-GLPI réalise actuellement la liaison entre un hôte et une machine virtuelle en se basant sur l'identifiant unique (uuid). Dans certains cas, il arrive que l'uuid soit différent au sein de la machine physique et virtuelle, la liaison est alors impossible.
-
-Le seul moyen d'associer manuellement une machine virtuelle à une machine physique est d'attribuer à la machine virtuelle déclarée sur l'hôte et à la machine virtuelle dans GLPI un uuid identique.
+.. image:: images/virtualization-computers-assets.png
+  :alt: Machines virtuelles associée à un ordinateur
+  :align: center
 
 .. note::
+  GLPI réalise la liaison entre un hôte et une machine virtuelle en se basant sur l'identifiant unique (uuid). Dans certains cas, il arrive que l'uuid soit différent au sein de la machine physique et virtuelle, la liaison est alors impossible.
 
-   En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour.
+  Le seul moyen d'associer manuellement une machine virtuelle à une machine physique est d'attribuer à la machine virtuelle déclarée sur l'hôte et à la machine virtuelle dans GLPI un uuid identique.
+
+  En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour.
+
+Antivirus
+~~~~~~~~~
+
+Cet onglet permet de renseigner le ou les antivirus associé(s) à l'ordinateur. 
+L'antivirus se caractérise par le nom du produit, son fabricant et toutes les informations relatives à son état: 
+
+  * actif ou non ;
+  * à jour ou non ; 
+  * la version du logiciel et de la base de signature ;
+  * et enfin son expiration.
+
+.. image:: images/antiviruses-computers-assets.png
+  :alt: Antivirus associés à un ordinateur
+  :align: center
+
+.. note::
+  En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour.
+
+.. include:: ../onglets/knowledgebase.rst
 
 .. include:: ../onglets/tickets.rst
 
-.. include:: onglets/problemes.rst
+.. include:: ../onglets/problems.rst
 
-.. include:: ../onglets/liens.rst
+.. include:: ../onglets/changes.rst
+
+.. include:: ../onglets/external-links.rst
+
+Certificats
+~~~~~~~~~~~
+
+Dans cet onglet pourront être associés à l'ordinateur les certificats déjà présents dans GLPI.
+
+.. image:: images/certificates-computers-assets.png
+  :alt: Certificat associé à un ordinateur
+  :align: center
+
+.. note::
+  Le lien est créé dans les deux sens. L'association sera visible depuis la fiche de l'ordinateur et depuis la fiche du certificat.
+
+
 
 .. include:: ../onglets/notes.rst
 
--   **[Onglet "Réservations"](Les_différents_onglets/Onglet_Réservations.rst)**
-     Gestion des réservations pour un objet d'inventaire
+.. include:: onglets/reservations.rst 
 
-.. include:: ../onglets/historique.rst
 
-.. include:: ../onglets/debug.rst
+Domaines
+~~~~~~~~
+
+.. versionadded:: 9.5
+
+Dans cet onglet de l'ordinateur, il pourra être établi un lien entre ce dernier et un domaine informatique matérialisé dans GLPI.
+
+Il existe deux types de lien :
+
+- **Appartenance**, l'ordinateur fait parti du domaine.
+- **Gestion**, l'ordinateur est un élément du parc qui gère le domaine ( un serveur Active Directory par exemple)
+
+.. note::
+  Le lien est créé dans les deux sens, il sera consultable depuis la fiche de l'ordinateur et depuis la fiche du domaine.
+
+.. image:: images/domains-computers-assets.png
+  :alt: Domaines associés à un ordinateur
+  :align: center
+
+Appliances
+~~~~~~~~~~
+
+TODO
+
+.. include:: ../onglets/historical.rst
 
 .. include:: ../onglets/all.rst
 
 Les différentes actions
 -----------------------
-
-Outre les :doc:`actions communes <../generalites/actions>` ; certaines actions sont spécifiques aux ordinateurs :
-
-* **Installer un logiciel avec licence sur un ordinateur**
-    Depuis l'onglet *Logiciels*, ajouter une licence en choisissant le nom du logiciel suivi du nom de la licence.
-    Depuis les actions de masse du tableau récapitulatif, choisissez **Installer**.
-
-    .. warning::
-
-       Un logiciel ne peut être installé que si sa licence possède une version d'achat et/ou d'utilisation.

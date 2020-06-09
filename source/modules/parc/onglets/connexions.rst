@@ -1,28 +1,21 @@
-.. orphan:
-
 Connexions
 ~~~~~~~~~~
 
-Dans cet onglet, il est possible de gérer les connexions directes entre un ordinateur et ses éléments connectés.
+Dans cet onglet, il est possible de matérialiser les connexions directes entre l'objet actuel et un **Ordinateur** présent dans GLPI.
+L'ordinateur associé sera affiché avec son nom, l'entité dans laquelle il est présent, son numéro de série ainsi que son numéro d'inventaire.
 
-Les connexions directes représentent la relation entre des matériels différents reliés de manière physique ou virtuelle.
+Ex: la souris du poste 1, l'écran du poste 2, etc.
 
-Depuis un ordinateur
-^^^^^^^^^^^^^^^^^^^^
+.. image:: /modules/parc/onglets/images/connections-tab.png
+ :alt: Connexion associée à un Ordinateur
+ :align: center
 
-Figure 1. Connexion depuis un ordinateur
-![image](docs/image/connexion_computer.png)
+.. note::
+	Il n'est possible de matérialiser qu'un seul lien depuis un objet !
+	Un objet autre qu'un Ordinateur ne peut avoir qu'un seul ordinateur associé. Un Ordinateur en revanche peut avoir une multitude de lien avec les autres objets.
 
-La connexion peut se faire vers un ou plusieurs élément du type moniteur, imprimante, périphérique ou téléphone.
-Pour chaque type d'objet connecté, les nom, numéro de série et numéro d'inventaire sont listés.
 
-Depuis un élément autre qu'un ordinateur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Figure 1. Connexion depuis un élément autre qu'un ordinateur (exemple d'un moniteur)
-![image](docs/image/connexion_monitor.png)
 
-Dans ce cas, la connexion ne peut se faire que vers un seul ordinateur.
-Le tableau listera le nom de cet ordinateur ainsi que ses numéros de série et d'inventaire.
 
-Les connexions ou déconnexions se font depuis la fiche de chaque matériel lié (onglet Connexions) ou depuis le système de modification massive.
+

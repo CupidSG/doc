@@ -7,9 +7,9 @@ Le module Parc de GLPI est destiné à la gestion des matériels et logiciels co
 La gestion de l'inventaire dans GLPI
 ------------------------------------
 
-GLPI, nativement, est un outil statique. GLPI permet de lister les équipements et logiciels mais une intervention humaine est nécessaire pour saisir les informations et les mettre à jour.
+GLPI, nativement, est un outil statique. Il permet de lister les équipements et logiciels mais une intervention humaine est nécessaire pour saisir les informations et les mettre à jour.
 
-Cependant, automatiser la remontée d'informations est possible en couplant GLPI avec un outils tiers spécialisé. Ainsi GLPI propose l'utilisation de 2 plugins existants :
+Cependant, automatiser la remontée d'informations est possible en couplant GLPI avec un outil tiers spécialisé. Ainsi GLPI propose l'utilisation de 2 plugins existants :
 
 * Le plugin `Fusion Inventory <https://github.com/fusioninventory/fusioninventory-for-glpi/>`_ disponible sur Github.
 
@@ -24,7 +24,7 @@ Cependant, automatiser la remontée d'informations est possible en couplant GLPI
 Objets disponibles
 -----------------
 
-Chaque objet implémenté dans GLPI bénéficie d'une "fiche". Cette fiche regroupe toutes les informations relatives à l'objet séparées en différents onglets (Composants, Connexions, etc.)
+Chaque objet implémenté dans GLPI bénéficie d'une "fiche". Cette fiche regroupe toutes les informations relatives à l'objet séparées en différents onglets.
 
 .. toctree::
    :maxdepth: 1

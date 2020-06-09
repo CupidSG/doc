@@ -1,46 +1,77 @@
 Moniteurs
 =========
 
-Dans la fiche des moniteurs, plusieurs informations sont disponibles :
+La fiche d'un moniteur regroupe plusieurs informations :
 
--   Sur la gestion du moniteur (le responsable technique, son statut, le lieu où il se trouve...),
--   Sur les caractéristiques générales du poste (le fabricant, le modèle, le type, le numéro de série...),
--   Sur les usagers du poste (connus ou non dans GLPI, groupe d'utilisateurs...),
--   Sur ses spécifications (sa taille, ses types de port : VGA, DVI, HDMI, DisplayPort, s'il a des enceintes ou encore sa connectivité).
+-   Sur les caractéristiques générales du matériel : le fabricant, le modèle, le type, le numéro de série ;
+-   Sur les spécifications du matériel : la taille, les types de port : VGA, DVI, HDMI, DisplayPort, présence d'enceinte ;
+-   Sur la gestion du matériel : le responsable technique, son statut, son lieu ;
+-   Sur les utilisateurs du matériel : présent ou non dans GLPI et la gestion du groupe d'utilisateur.
 
-**Description du type de gestion :**
 
-Il est possible de gérer les moniteurs de manière unitaire ou globale.
+.. note::
+	Il est possible de gérer les moniteurs de manière unitaire ou globale.
 
-La gestion unitaire correspond à une gestion classique (un moniteur pour un ordinateur) alors que dans la gestion globale le moniteur devient un élément virtuel global qui sera connecté à plusieurs ordinateurs.
+	La gestion unitaire correspond à une gestion classique (un moniteur pour un ordinateur) alors que dans la gestion globale le moniteur devient un élément virtuel global qui sera connecté à plusieurs ordinateurs.
 
-La gestion globale permet de limiter le nombre d'éléments à gérer dans le cas où ceux-ci ne constituent pas une donnée stratégique dans la gestion du parc informatique.
+	La gestion globale permet de limiter le nombre d'éléments à gérer dans le cas où ceux-ci ne constituent pas une donnée stratégique dans la gestion du parc informatique.
 
 Il est possible d'utiliser les :doc:`gabarits avec les moniteurs <../generalites/gabarits>`.
 
 Les différents onglets
 ----------------------
 
-.. _connexion_monitor:
+Moniteur
+~~~~~~~~
+
+Premier onglet de la fiche, il regroupe les informations principales du moniteur.
+
+.. image:: images/monitors-assets.png
+  :alt: Onglet principal d'un moniteur
+  :align: center
+
+.. include:: onglets/impact-analysis.rst
+
+Systèmes d'exploitation
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 9.5
+
+Dans cet onglet, il est donc possible d'associer un Système d'exploitation avec un moniteur.
+
+.. image:: images/os-monitors-assets.png
+  :alt: Système d'exploitation d'un moniteur
+  :align: center
+
+.. note::  
+  * Les systèmes d'exploitations sont des **intitulés** dans GLPI, il est possible de les créer au préalable.
+  * Les objets **Système d'exploitation** et **Moniteur** sont désormais associables afin d'intégrer au mieux certains matériels spécifiques dans GLPI.
 
 .. include:: onglets/connexions.rst
 
 .. include:: onglets/gestion.rst
 
-.. include:: ../onglets/contrats.rst
+.. include:: ../onglets/contra~ct.rst
 
 .. include:: ../onglets/documents.rst
+
+.. include:: ../onglets/knowledgebase.rst
 
 .. include:: ../onglets/tickets.rst
 
 .. include:: onglets/problemes.rst
 
-.. include:: ../onglets/liens.rst
+.. include:: ../onglets/external-links.rst
 
 .. include:: ../onglets/notes.rst
 
--   **[Onglet "Réservations"](Les_différents_onglets/Onglet_Réservations.rst)**
-     Gestion des réservations pour un objet d'inventaire
+.. include:: onglets/reservations.rst
+
+Domaines
+~~~~~~~~
+
+Appliances
+~~~~~~~~~~
 
 .. include:: ../onglets/historique.rst
 
