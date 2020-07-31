@@ -16,7 +16,8 @@ La gestion unitaire correspond à une gestion classique (une imprimante pour un 
 
 La gestion globale permet de limiter le nombre d'éléments à gérer dans le cas où ceux-ci ne constituent pas une donnée stratégique dans la gestion du parc informatique.
 
-**[Gérer les gabarits](Les_différentes_actions/Gérer_les_gabarits.rst)**
+.. note::
+	Il est possible d'utiliser les :doc:`gabarits avec les imprimantes <../generalites/gabarits>`.
 
 Les différents onglets
 ----------------------
@@ -26,7 +27,7 @@ Les différents onglets
 Cartouches
 ~~~~~~~~~~
 
-Les cartouches associées au modèle d'imprimante sélectionnée.
+Dans cet onglet, il est possible de gérer les cartouches associées au modèle d'imprimante sélectionné.
 
 Il se décompose en deux parties :
 
@@ -55,8 +56,13 @@ Il se décompose en deux parties :
 
 .. include:: ../onglets/notes.rst
 
--   **[Onglet "Réservations"](Les_différents_onglets/Onglet_Réservations.rst)**
-     Gestion des réservations pour un objet d'inventaire
+.. include:: onglets/reservations.rst
+
+.. include:: onglets/certificats.rst
+
+.. include:: onglets/domains.rst
+
+.. include:: onglets/appliances.rst
 
 .. include:: ../onglets/historique.rst
 
@@ -68,4 +74,9 @@ Il se décompose en deux parties :
 Les différentes actions
 -----------------------
 
-Les imprimantes ne proposent pas d'actions spécifiques, se reporter aux :doc:`actions communes <../generalites/actions>`.
+*   :doc:`Ajouter une imprimante <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser une imprimante <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier une imprimante <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer une imprimante <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à une imprimante <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer une imprimante <../../Les_différentes_actions/transferer_un_objet>`

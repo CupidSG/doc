@@ -63,17 +63,7 @@ Dans cet onglet il est possible d'affecter un système d'exploitation à l'ordin
 .. include:: onglets/composants.rst
 
 
-Volumes
-~~~~~~~
-
-Dans cet onglet, sont gérés les volumes de l'ordinateur. Un volume lié à un ordinateur est caractérisé par son nom, la partition physique, son point de montage, son système de fichiers ainsi que sa taille. Il est également possible de définir la taille restant libre sur le volume.
-
-.. note::
-   En cas d'utilisation d'un outil d'inventaire tiers, ces informations peuvent être automatiquement importées et mises à jour.
-
-.. image:: images/volumes-computers-assets.png
-        :alt: Volumes liés à l'objet ordinateur
-        :align: center
+.. include:: onglets/volumes.rst
 
 Logiciels (et licences)
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,48 +153,15 @@ L'antivirus se caractérise par le nom du produit, son fabricant et toutes les i
 
 .. include:: ../onglets/external-links.rst
 
-Certificats
-~~~~~~~~~~~
-
-Dans cet onglet pourront être associés à l'ordinateur les certificats déjà présents dans GLPI.
-
-.. image:: images/certificates-computers-assets.png
-  :alt: Certificat associé à un ordinateur
-  :align: center
-
-.. note::
-  Le lien est créé dans les deux sens. L'association sera visible depuis la fiche de l'ordinateur et depuis la fiche du certificat.
-
-
+.. include:: onglets/certificats.rst
 
 .. include:: ../onglets/notes.rst
 
 .. include:: onglets/reservations.rst 
 
+.. include:: onglets/domains.rst
 
-Domaines
-~~~~~~~~
-
-.. versionadded:: 9.5
-
-Dans cet onglet de l'ordinateur, il pourra être établi un lien entre ce dernier et un domaine informatique matérialisé dans GLPI.
-
-Il existe deux types de lien :
-
-- **Appartenance**, l'ordinateur fait parti du domaine.
-- **Gestion**, l'ordinateur est un élément du parc qui gère le domaine ( un serveur Active Directory par exemple)
-
-.. note::
-  Le lien est créé dans les deux sens, il sera consultable depuis la fiche de l'ordinateur et depuis la fiche du domaine.
-
-.. image:: images/domains-computers-assets.png
-  :alt: Domaines associés à un ordinateur
-  :align: center
-
-Appliances
-~~~~~~~~~~
-
-TODO
+.. include:: onglets/appliances.rst
 
 .. include:: ../onglets/historical.rst
 
@@ -212,3 +169,10 @@ TODO
 
 Les différentes actions
 -----------------------
+
+*   :doc:`Ajouter un ordinateur <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser un ordinateur <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un ordinateur <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un ordinateur <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un ordinateur <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un ordinateur <../../Les_différentes_actions/transferer_un_objet>`

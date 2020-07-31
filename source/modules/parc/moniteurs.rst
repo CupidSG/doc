@@ -82,6 +82,9 @@ Appliances
 Les différentes actions
 -----------------------
 
-Outre les :doc:`actions communes <../generalites/actions>` ; certaines actions sont spécifiques aux moniteurs :
-
-* :ref:`Connecter un moniteur à un ordinateur <connexion_monitor>`
+*   :doc:`Ajouter un moniteur <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser un moniteur <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un moniteur <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un moniteur <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un moniteur <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un moniteur <../../Les_différentes_actions/transferer_un_objet>`

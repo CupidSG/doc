@@ -32,7 +32,6 @@ Chaque objet implémenté dans GLPI bénéficie d'une "fiche". Cette fiche regro
    ordinateurs
    moniteurs
    logiciels
-   licenses
    materiels-reseaux
    peripheriques
    imprimantes

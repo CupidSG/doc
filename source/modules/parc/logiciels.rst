@@ -148,53 +148,22 @@ Regroupement
 ~~~~~~~~~~~~
 
 .. warning::
- Cet onglet n'apparaîtra que si GLPI dispose de plusieurs entités !
+ Cet onglet n'est disponible que pour les plateformes multi-entités et l'option **Sous-entités** du logiciel doit être sur **Oui**
 
-Comment regrouper des logiciels homonymes dans des sous-entités.
-
-.. note::
-
-   Cette option n'est disponible que pour les plateformes multi-entités.
-
-Elle permet de regrouper les logiciels des entités filles sur l'entité mère.
-
-Comment réaliser un regroupement :
-
-#. Si le logiciel n'existe pas dans l'entité mère :
-   Créer un logiciel dont le nom est strictement identique au nom du logiciel dans les entités filles ;
-#. Ouvrir la fiche du logiciel de l'entité mère ;
-#. Activer la récursivité (sous-entités à Oui en haut à droite) ;
-   Un nouvel onglet "Regroupement" apparaît après l'onglet "Historique".
-#. Ouvrir cet onglet ;
-   Une liste indique les logiciels des entités filles ayant le même nom.
-#. Sélectionner les lignes souhaitées et valider le regroupement.
-
-.. warning::
-
-    Cette opération est irréversible.
-
-Effets du regroupement :
-
-* Les licences sont attachées au logiciel de l'entité mère, mais restent dans les sous-entités d'origine ;
-* Les versions sont fusionnées (plus de doublon dans l'entité mère);
-* Les anciens logiciels sont déplacés dans la corbeille ;
+Il permet de regrouper les logiciels des entités filles sur l'entité mère.
 
 .. note::
-
-    Lors de l'utilisation d'un outil d'inventaire tiers, ne pas oublier :
-
-    * de vider la corbeille à la fin du regroupement (sinon la synchronisation restaurera le logiciel en cas de nouvelle version) ;
-    * d'affecter le même fabricant au nouveau logiciel (la synchronisation vérifiant le nom du fabricant, un nouveau logiciel serait créé).
-
-.. include:: ../onglets/debug.rst
+ Pour en savoir plus, consultez l'action de regroupement en bas de page.
 
 .. include:: ../onglets/all.rst
 
 Les différentes actions
 -----------------------
 
-Outre les :doc:`actions communes <../generalites/actions>` ; certaines actions sont spécifiques aux logiciels :
-
-* :ref:`Ajouter une version à un logiciel <versions_soft>`
-* **[Gérer les licences](03_Module_Parc/04_Logiciels/Onglet_Licences.rst)**
-    Depuis le menu ***Parc > Logiciels*** cliquer sur le nom de la licence dans l'onglet *Licences*.
+*   :doc:`Ajouter un logiciel <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser un logiciel <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un logiciel <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un logiciel <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un logiciel <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un logiciel <../../Les_différentes_actions/transferer_un_objet>`
+*   :doc:`Regroupement <../../Les_différentes_actions/regroupement>`

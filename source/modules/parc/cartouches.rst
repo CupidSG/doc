@@ -1,58 +1,68 @@
 Cartouches
 ==========
 
-Ce module permet de créer des modèles de cartouches ainsi que les cartouches correspondantes.
+Ce module permet de gérer différents modèles de cartouches d'imprimantes, les quantités et l'affectation des cartouches sur les différentes imprimantes du parc.
 
-Dans la fiche d'une cartouche, plusieurs informations sont disponibles:
+Dans la fiche d'une cartouche, l'onglet principal concerne le modèle et ses informations relatives:
 
--   Sur les caractéristiques générales de la cartouche (le fabricant, le type, la référence...) ;
--   Sur la gestion de l'imprimante (le responsable technique, son lieu de stockage...)
+-   le nom, le fabricant, le type, la référence, le lieu de stockage;
+-   le ou les personne(s) en charge de ces matériels: responsable technique, groupe technique.
 
-Le seuil d'alerte correspond à la valeur minimale à partir de laquelle une alerte est déclenchée.
+Le champ 'Seuil d'alerte' correspond au nombre critique de cartouche associée au modèle à partir duquel une alerte est déclenchée afin de prévenir un manque dans le stock de l'organisation.
 
-***Remarque :** Pour que les alertes fonctionnent, il faut que les notifications soient activées. (voir [Configurer les notifications](08_Module_Configuration/04_Notifications/01_Configurer_les_notifications.rst "Les notifications se configurent depuis le menu Configuration > Notifications ;")).*
+.. note::
+	Pour que les alertes fonctionnent, les notifications au sein de GLPI doivent être actives !
 
-Pour qu'une cartouche puisse être installable sur une imprimante, celle-ci doit être renseignée comme compatible avec cette imprimante.
 
-La gestion des stocks partagés est possible en définissant l'élément comme récursif sur une entité. Les éléments seront alors disponibles pour toutes les sous-entités.
+.. image:: images/type-cartridge-assets.png
+  :alt: Modéle de cartouche
+  :align: center
 
 Les différents onglets
 ----------------------
-- **Onglet "Cartouches"**
-  C'est depuis cet onglet que vous pouvez ajouter autant de cartouches que nécessaire pour ce modèle. Vous pouvez d'ailleurs ajouter plusieurs cartouches en une seule fois.
 
- Un premier tableau liste les cartouches neuves ou utilisées, le second tableau liste les cartouches usagées.
+Cartouches
+~~~~~~~~~~
 
-Figure 1. Onglet Cartouches
-![image](docs/image/cartridge.png)
+C'est depuis cet onglet qu'il est possible de visualiser l'état des cartouches, l'imprimante utilisée et d'agir sur les cartouches : ajout, bascule dans le stock, suppression et la gestion administrative et financière.
 
+Un premier tableau liste les cartouches neuves ou utilisées et un second tableau liste les cartouches usagées.
 
--   **Onglet "Modèles d'imprimantes"**
-    Cet onglet permet de déterminer les modèles d'imprimantes compatibles avec la cartouche.
+.. image:: images/cartridge-assets.png
+  :alt: Tableaux des cartouches
+  :align: center
+
+Modèles d'imprimantes
+~~~~~~~~~~~~~~~~~~~~~
+
+Cet onglet permet de matérialiser la compatibilité des cartouches avec un ou plusieurs modèles d'imprimante déjà renseignés dans GLPI.
+
+.. warning::
+	Il est possible d'associer les cartouches avec les imprimantes entre elles uniquement  une fois que la compatibilité est matérialisée entre un modéle de cartouche et un modèle d'imprimante !
+
+.. image:: images/printertypes-cartridge-assets.png
+  :alt: Tableaux des cartouches
+  :align: center
+
 
 .. include:: onglets/gestion.rst
 
 .. include:: ../onglets/documents.rst
 
-.. include:: ../onglets/liens.rst
+.. include:: ../onglets/external-links.rst
 
 .. include:: ../onglets/notes.rst
 
-.. include:: ../onglets/historique.rst
-
-.. include:: ../onglets/debug.rst
+.. include:: ../onglets/historical.rst
 
 .. include:: ../onglets/all.rst
 
 Les différentes actions
 -----------------------
--   **[Ajouter un modèle de cartouche](Les_différentes_actions/Créer_un_nouvel_objet.rst)**
--   **[Voir un modèle de cartouche](Les_différentes_actions/Visualiser_un_objet.rst)**
--   **[Modifier un modèle de cartouche](Les_différentes_actions/Modifier_un_objet.rst)**
--   **[Supprimer un modèle de cartouche](Les_différentes_actions/Supprimer_un_objet.rst)**
--   **Ajouter de nouvelles cartouches à un modèle**
-    Voir onglet *Cartouches* ci-dessus
--   **Ajouter un modèle d'imprimante pour le modèle de cartouche**
-    Voir onglet *Modèle d'imprimante* ci-dessus
--   **[Associer un document à un modèle de cartouche](Les_différentes_actions/Lier_un_document_à_un_objet.rst)**
--   **[Transférer une cartouche vers une autre entité](Les_différentes_actions/Transférer_un_objet.rst)**
+
+*   :doc:`Ajouter un modèle de cartouche <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser les modèles de cartouche <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un modèle de cartouche <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un modèle de cartouche <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un modèle de cartouche <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un modèle de cartouche <../../Les_différentes_actions/transferer_un_objet>`

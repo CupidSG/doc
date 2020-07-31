@@ -12,10 +12,16 @@ Les différents onglets
 
 .. include:: onglets/composants.rst
 
+..include:: onglets/volumes.rst
+
 .. include:: onglets/ports-reseaux.rst
 
--   **Onglet "Noms réseaux"**
-     Récapitulatif des adresses IP et réseaux IP pour chaque nom réseau.
+Noms réseaux
+~~~~~~~~~~~~
+
+Récapitulatif des adresses IP et réseaux IP pour chaque nom réseau.
+
+A COMPLETER
 
 .. include:: onglets/gestion.rst
 
@@ -23,24 +29,36 @@ Les différents onglets
 
 .. include:: ../onglets/documents.rst
 
+..include:: ../onglets/knowledgebase.rst
+
 .. include:: ../onglets/tickets.rst
 
-.. include:: onglets/problemes.rst
+.. include:: onglets/problems.rst
 
-.. include:: ../onglets/liens.rst
+.. include:: ../onglets/changes.rst
+
+.. include:: ../onglets/external-links.rst
 
 .. include:: ../onglets/notes.rst
 
--   **[Onglet "Réservations"](Les_différents_onglets/Onglet_Réservations.rst)**
-     Gestion des réservations pour un objet d'inventaire
+.. include:: onglets/reservations.rst
 
-.. include:: ../onglets/historique.rst
+.. include:: onglets/certificats.rst
 
-.. include:: ../onglets/debug.rst
+.. include:: onglets/domains.rst
+
+.. include:: onglets/appliances.rst
+
+.. include:: ../onglets/historical.rst
 
 .. include:: ../onglets/all.rst
 
 Les différentes actions
 -----------------------
 
-Les matériels réseaux ne proposent pas d'actions spécifiques, se reporter aux :doc:`actions communes <../generalites/actions>`.
+*   :doc:`Ajouter un matériel réseau <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser un matériel réseau <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un matériel réseau <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un matériel réseau <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un matériel réseau <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un matériel réseau <../../Les_différentes_actions/transferer_un_objet>`
