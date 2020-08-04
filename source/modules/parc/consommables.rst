@@ -1,56 +1,64 @@
 Consommables
 ============
 
-Dans la fiche d'un consommable, plusieurs informations sont disponibles:
+Ce module permet de gérer différents modèles de consommables, les quantités de consommables associées et l'affectation des consommables sur les utilisateurs et les groupes de GLPI.
 
--   Sur les caractéristiques générales du consommable (le fabricant, le type, la référence...) ;
--   Sur la gestion du consommable (le responsable technique, son lieu de stockage...).
+Dans la fiche d'un consommable, l'onglet principal concerne le modèle et ses informations relatives:
 
-Le seuil d'alerte correspond à la valeur minimale à partir de laquelle une alerte est déclenchée.
+*	le nom, le fabricant, le type, la référence, le lieu de stockage;
+*	le ou les personne(s) en charge de ces matériels: responsable technique, groupe technique.
 
-***Remarque :** Pour que les alertes fonctionnent, il faut que les notifications soient activées. (voir [Configurer les notifications](config_notification.html "Les notifications se configurent depuis le menu Configuration > Notifications ;")).*
+Le champ 'Seuil d'alerte' correspond au nombre critique, de consommable associé au modèle, à partir duquel une alerte est déclenchée afin de prévenir un manque dans le stock de l'organisation.
 
-Pour passer un consommable de l'état de neuf à utilisé, il est nécessaire de renseigner l'utilisateur ou le groupe concerné.
+.. warning::
+	Pour que les alertes fonctionnent, les notifications au sein de GLPI doivent être actives !
 
-La gestion des stocks partagés est possible en définissant l'élément comme récursif sur une entité. Les éléments seront alors disponibles pour toutes les sous-entités.
+.. note::
+	- Le changement d'état d'un consommable ( neuf > utilisé ) se fait quand on affecte ce dernier à un utilisateur ou un groupe de GLPI contrairement à la gestion des cartouches !
+	- La gestion des stocks partagés est possible en définissant le consommable comme récursif sur une entité. Les consommables seront alors disponibles pour toutes les sous-entités de GLPI.
+
+.. image:: images/type-consumables-assets.png
+  :alt: Modéle de consommables
+  :align: center
 
 
 Les différents onglets
 ----------------------
 
-.. _ajout-consommables-modele:
-
 Consommables
 ~~~~~~~~~~~~
 
-C'est depuis cet onglet que vous pouvez ajouter autant de consommables que nécessaire. Vous pouvez d'ailleurs ajouter plusieurs consommables en une seule fois.
+ Depuis cet onglet, il est possible:
 
-Un premier tableau liste les consommables neufs, le second tableau liste les consommables utilisés avec notamment le nom du groupe ou de la personne à qui il a été donné.
+ *	de visualiser l'état des consommables;
+ *	de visualiser leur affectation;
+ *	d'agir sur les consommables : ajout, bascule dans le stock, affectation, suppression et la gestion administrative et financière.
 
-C'est depuis les actions de masse de cet onglet que sont attribuer les consommables (Actions **Donner**).
+Un premier tableau liste les consommables neufs et un second tableau liste les consommables utilisés (affectés).
 
-Figure 1. Onglet Consommables
-![image](docs/image/consumable.png)
+.. image:: images/consumables-assets.png
+  :alt: Tableaux des cosommables
+  :align: center
 
 .. include:: onglets/gestion.rst
 
 .. include:: ../onglets/documents.rst
 
-.. include:: ../onglets/liens.rst
+.. include:: ../onglets/external-links.rst
 
 .. include:: ../onglets/notes.rst
 
-.. include:: ../onglets/debug.rst
+.. include:: ../onglets/historical.rst
 
 .. include:: ../onglets/all.rst
 
 Les différentes actions
 -----------------------
 
-Outre les :doc:`actions communes <../generalites/actions>` ; certaines actions sont spécifiques aux consommables :
-
-* :ref:`Ajouter de nouveaux consommables à un modèle <ajout-consommables-modele>` ;
-* Lister les consommables attribués
-   ![image](docs/image/resumeConsumable.png)
-   L'icone de droite permet d'avoir un résumé des consommables prêtés
-   ![image](docs/image/resumeConsumableExample.png)
+*   :doc:`Ajouter un modèle de consommables <../../Les_différentes_actions/creer_un_nouvel_objet>`
+*   :doc:`Visualiser les modèles de consommables <../../Les_différentes_actions/visualiser_un_objet>`
+*   :doc:`Modifier un modèle de consommables <../../Les_différentes_actions/modifier_un_objet>`
+*   :doc:`Supprimer un modèle de consommables <../../Les_différentes_actions/supprimer_un_objet>`
+*   :doc:`Associer un document à un modèle de consommables <../../Les_différentes_actions/associer_un_document_a_un_objet>`
+*   :doc:`Transférer un modèle de consommables <../../Les_différentes_actions/transferer_un_objet>`
+*	:doc:`Donner un consommable <../../Les_différentes_actions/donner_un_consommable>`

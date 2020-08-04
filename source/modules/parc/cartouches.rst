@@ -1,7 +1,7 @@
 Cartouches
 ==========
 
-Ce module permet de gérer différents modèles de cartouches d'imprimantes, les quantités et l'affectation des cartouches sur les différentes imprimantes du parc.
+Ce module permet de gérer différents modèles de cartouches d'imprimantes, les quantités de cartouches associées et l'affectation des cartouches sur les différentes imprimantes du parc.
 
 Dans la fiche d'une cartouche, l'onglet principal concerne le modèle et ses informations relatives:
 
@@ -10,7 +10,7 @@ Dans la fiche d'une cartouche, l'onglet principal concerne le modèle et ses inf
 
 Le champ 'Seuil d'alerte' correspond au nombre critique de cartouche associée au modèle à partir duquel une alerte est déclenchée afin de prévenir un manque dans le stock de l'organisation.
 
-.. note::
+.. warning::
 	Pour que les alertes fonctionnent, les notifications au sein de GLPI doivent être actives !
 
 
